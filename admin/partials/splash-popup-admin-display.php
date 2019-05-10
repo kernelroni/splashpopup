@@ -1,4 +1,10 @@
+<?php
 
+if(intval($duration) == 0){
+	$duration = 30;
+}
+
+?>
 <div class="wrap">
  
     <h1><?php echo esc_html( get_admin_page_title() ); ?></h1>
@@ -15,7 +21,7 @@
 
 	<tr>
 		<td class="left">
-			<h3> Check and Active </h3>
+			 Check and Active 
 		</td>
 		
 		<td>
@@ -95,12 +101,13 @@
 	
 	<tr>
 		<td class="left">
-			Time Zone
+			Popup Duration (n)
 		</td>
 		
 		<td>
-			<input type="text" name="splashinfo[timezone]" id="splashtimezone" value="<?php echo $timezone ;?>" class="regular-text" placeholder="Asia/Dhaka" />
-			<small> see timezone <a href="https://www.php.net/manual/en/timezones.php" target="_blank" /> PHP Timezone </a> Default : Asia/Dhaka </small>
+			<input type="text" name="splashinfo[duration]" id="splashduration" value="<?php echo intval($duration) ;?>" placeholder="30" />
+			<small> Popup will automatically hide after n second (Default 30 Sec. )</small>
+			
 		</td>
 	</tr>	
 	

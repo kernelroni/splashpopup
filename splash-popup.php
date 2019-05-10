@@ -14,7 +14,7 @@
  *
  * @wordpress-plugin
  * Plugin Name:       splashPopup
- * Plugin URI:        http://perfectreturn.com
+ * Plugin URI:        https://github.com/kernelroni/splashpopup
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
  * Version:           1.0.0
  * Author:            Roni Das

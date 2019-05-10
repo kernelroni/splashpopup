@@ -210,14 +210,11 @@ class Splash_Popup {
 				
 		if($splashTime){			
 			
-			$data = unserialize($splashTime);
+			$data = unserialize($splashTime);			
 			
-			$timezone = $data['timezone'];
-			if(trim($timezone) == ""){
-				$timezone = 'Asia/Dhaka'; // default value
-			}
+			$timezone = get_option('timezone_string'); // get the timezone form wordpress settings page. // wordpresssite/wp-admin/options-general.php
 			
-			$gmtTimezone = new DateTimeZone($timezone); // https://www.php.net/manual/en/timezones.php	
+			$gmtTimezone = new DateTimeZone($timezone); 
 			$startDate = $data['startdate'];
 			$starthr = $data['starthr'];
 			$startmin = $data['startmin'];

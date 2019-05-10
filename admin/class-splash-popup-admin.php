@@ -108,26 +108,31 @@ class Splash_Popup_Admin {
 	
 	public function admin_view(){
 
+		$post = $_POST['splashinfo'];
+		$info = 0;
 		
-		$info = serialize($_POST['splashinfo']);
+		
+		
+		if(intval($post['duration'])  <= 0 ){
+			$post['duration'] = 30;
+		}
 		
 		if($_POST){
 			
-			$info = serialize($_POST['splashinfo']);
+			$info = serialize($post);
 			update_option('splashinfo', $info);
 		}
 		
 		$info = get_option('splashinfo', false);
 		
 		if($info){
-		$data = unserialize($info);
-		
-		
+		$data = unserialize($info);		
 		extract($data);
 		}
 		
 		
 		
+	
 		
 		
 		//echo "admin page for splash screen settings";
