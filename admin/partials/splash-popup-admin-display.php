@@ -1,7 +1,11 @@
 <?php
 
 if(intval($duration) == 0){
-	$duration = 30;
+	$duration = 30; // sec
+}
+
+if(intval($popup_interval) == 0){
+	$popup_interval = 5; // 5min
 }
 
 ?>
@@ -101,15 +105,29 @@ if(intval($duration) == 0){
 	
 	<tr>
 		<td class="left">
-			Popup Duration (n)
+			Popup Duration (N Sec)
 		</td>
 		
 		<td>
-			<input type="text" name="splashinfo[duration]" id="splashduration" value="<?php echo intval($duration) ;?>" placeholder="30" />
+			<input type="number" name="splashinfo[duration]" id="splashduration" value="<?php echo intval($duration) ;?>" placeholder="30" />
 			<small> Popup will automatically hide after n second (Default 30 Sec. )</small>
 			
 		</td>
-	</tr>	
+	</tr>
+
+
+	<tr>
+		<td class="left">
+			Popup Interval (N Min)
+		</td>
+		
+		<td>
+			<input type="number" name="splashinfo[popup_interval]" id="splashinterval" value="<?php echo intval($popup_interval) ;?>" placeholder="5" />
+			<small> Popup will apear every after N min, (Default 5 Min) </small>
+			
+		</td>
+	</tr>
+	
 	
 	<tr>
 		<td class="left">

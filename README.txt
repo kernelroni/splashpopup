@@ -1,9 +1,9 @@
 === Plugin Name ===
 Contributors: kernelroni
 Donate link: http://perfectreturn.com
-Tags: comments, spam
+Tags: splashscreen, splashpopup, popup
 Requires at least: 4.0.1
-Tested up to: 4.0.1
+Tested up to: 5.2
 Stable tag: 4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html

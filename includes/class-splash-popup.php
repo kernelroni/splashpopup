@@ -171,14 +171,35 @@ class Splash_Popup {
 	 */
 	private function define_public_hooks() {
 		
-		
+		$popup_cookie = "popup_cookie";
+		$popup_cookie_value = "yes";		
 		
 		
 		$splashinfo = get_option('splashinfo', false);				
 		$data = unserialize($splashinfo);		
 		extract($data);
+		$popup_interval = intval($popup_interval);
+
+		$popup_shown = $_COOKIE[$popup_cookie] == "yes";	 // 1/0	
 		
-		if(isset($is_active) && intval($is_active) == 1 && $this->splash_within_time_slot() ){	
+
+		
+		
+				
+
+
+
+
+
+
+
+
+		
+		
+		
+		
+		
+		if(isset($is_active) && intval($is_active) == 1 && $this->splash_within_time_slot() && !$popup_shown){	
 
 			
 		
@@ -192,7 +213,17 @@ class Splash_Popup {
 		
 		}
 		
+
 		
+		
+
+		if($popup_interval == 0 ){ // popup interval is with in the data var.
+			$popup_interval = 5; // default 5 min			
+		}		
+		
+		// popup already show in this session 
+		// save the interval into cookie
+		setcookie($popup_cookie, $popup_cookie_value, time() + $popup_interval*60, "/"); // 60sec = 1 min		
 
 
 		

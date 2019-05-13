@@ -110,8 +110,7 @@ class Splash_Popup_Admin {
 
 		$post = $_POST['splashinfo'];
 		$info = 0;
-		
-		
+
 		
 		if(intval($post['duration'])  <= 0 ){
 			$post['duration'] = 30;
