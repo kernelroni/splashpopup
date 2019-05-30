@@ -95,6 +95,12 @@ class Splash_Popup_Admin {
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
+		 
+		wp_enqueue_media();
+		
+		wp_enqueue_script('jquery-ui-datepicker');
+		wp_register_style('jquery-ui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css');		
+		wp_enqueue_style('jquery-ui');			 
 
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/splash-popup-admin.js', array( 'jquery' ), $this->version, false );
 

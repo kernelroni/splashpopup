@@ -43,7 +43,7 @@ jQuery("#splashSelectImage").on( 'click', function( event ){
 
   
 	// date picker
-	$( ".datetime" ).datepicker({dateFormat : "yy-mm-dd"});
+	jQuery( ".datetime" ).datepicker({dateFormat : "yy-mm-dd"});
   
   
 	
